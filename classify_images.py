@@ -72,7 +72,7 @@ def classify_images(images_dir, results_dic, model):
       pass
         
       truth = results_dic[key][0]
-      print(truth, ":::" + model_label)
+      #print(truth, ":::" + model_label)
       if truth in model_label:
         
         pass
