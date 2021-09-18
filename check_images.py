@@ -65,7 +65,8 @@ def main():
 
     # Function that checks Pet Images in the results Dictionary using results    
     check_creating_pet_image_labels(results)
-
+    # for k, v in results.items():
+    #     print("key : ", k, " value : ", v)
 
     # TODO 3: Define classify_images function within the file classify_images.py
     # Once the classify_images function has been defined replace first 'None' 
@@ -88,7 +89,7 @@ def main():
     # Adjusts the results dictionary to determine if classifier correctly 
     # classified images as 'a dog' or 'not a dog'. This demonstrates if 
     # model can correctly classify dog images as dogs (regardless of breed)
-    adjust_results4_isadog(results, None)
+    adjust_results4_isadog(results, "dognames.txt")
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
     check_classifying_labels_as_dogs(results)
@@ -113,7 +114,7 @@ def main():
     #      print_results(results, results_stats, in_arg.arch, True, True)
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
-    print_results(results, results_stats, None, True, True)
+    print_results(results, results_stats, in_arg.arch, True, True)
     
     # TODO 0: Measure total program runtime by collecting end time
     end_time = time()

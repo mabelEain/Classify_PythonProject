@@ -104,6 +104,7 @@ def classify_images(images_dir, results_dic, model):
        # as an exact match to on of the terms in the list - then they are added to 
        # results_dic as an exact match(1) using extend list function
        if truth in model_label:
+          
            pass
 
        # TODO: 3d. REPLACE pass BELOW with CODE that uses the extend list function
