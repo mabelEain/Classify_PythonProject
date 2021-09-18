@@ -69,14 +69,14 @@ def classify_images(images_dir, results_dic, model):
        
       model_label = classifier(images_dir+key, model).lower()
       model_label = model_label.strip()
-      pass
-        
+      
       truth = results_dic[key][0]
-      print(truth, ":::" + model_label)
+      #print(key, ":::", truth, ":::" + model_label)
+      results_dic[key] = [ results_dic[key][0], model_label]
       if truth in model_label:
-        results_dic[truth].append(1)
-        pass
+        results_dic[key].append(1)
       else:
-          pass
+        results_dic[key].append(0)
 
+    print("The results dictionary is: ", results_dic)
     return results_dic
